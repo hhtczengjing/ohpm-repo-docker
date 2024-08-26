@@ -1,0 +1,16 @@
+version: '2'
+services:
+  ohpm-repo:
+    build: ./
+    container_name: ohpm-repo
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 8088:8088
+    volumes:
+      - ~/docker/ohpm-repo/conf/config.yaml:/home/ohpm/config.yaml
+      - ~/docker/ohpm-repo/uplink:/home/ohpm/ohpm-repo/uplink
+      - ~/docker/ohpm-repo/logs:/home/ohpm/ohpm-repo/logs
+      - ~/docker/ohpm-repo/storage:/home/ohpm/ohpm-repo/storage
+      - ~/docker/ohpm-repo/db:/home/ohpm/ohpm-repo/db
