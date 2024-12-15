@@ -4,12 +4,16 @@ ohpm-repo docker，正式环境可以参考 [hangox/ohpm-repo](https://hub.docke
 
 ### 使用
 
-从官网下载ohpm-repo，解压放在根目录。
+从官网下载ohpm-repo，解压放在根目录。修改 `conf/config.yaml`
+
+```
+listen: 0.0.0.0:8088        # 建议修改为具体的ip:port
+```
 
 1、编译
 
 ```
-docker build -t zengjing/ohpm-repo:5.0.5.0 .
+docker build -t zengjing/ohpm-repo:5.0.7.0 .
 ```
 
 2、运行
@@ -25,7 +29,7 @@ docker run -d \
     -v ~/docker/ohpm-repo/db:/home/ohpm/ohpm-repo/db  \
     -e TZ=Asia/Shanghai \
     --name ohpm-repo \
-    zengjing/ohpm-repo:5.0.5.0
+    zengjing/ohpm-repo:5.0.7.0
 ```
 
 3、使用 docker-compose
