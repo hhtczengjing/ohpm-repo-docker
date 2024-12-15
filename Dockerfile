@@ -1,6 +1,6 @@
 FROM node:18
 
-ENV VERSION=5.0.5.0
+ENV VERSION=5.0.7.0
 ENV TZ=Asia/Shanghai
 ENV USER_NAME=ohpm
 ENV USER_HOME=/home/ohpm
